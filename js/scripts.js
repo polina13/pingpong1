@@ -1,3 +1,22 @@
 var pingpong = function(number) {
-  return false;
+  for (var i=1; i <= number; i++) {
+    var numbers = [];
+    if ((i % 3 === 0) && ( i % 5 === 0)) {
+      numbers.push("pingpong");
+    }else if ( i % 3 === 0) {
+      numbers.push("ping");
+    }else if ( i % 5 === 0) {
+      numbers.push("pong");
+    }else {
+      return false;
+      numbers.push(i);
+    }
+  };
+  $(document).ready(function () {
+    $("form#submit").submit(function(event) {
+      var number = parseInt($("input#inputnumber").val());
+    });
+    (event).preventDefault();
+  })
+    return numbers;
 };
