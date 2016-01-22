@@ -30,11 +30,11 @@ var divisiblebyfifteen = function(numberInput) {
     var output = numbersinarray(numberInput);
 	  output.forEach(function(number, index, output) {
 		if (divisiblebyfifteen(number) === 'pingpong') {
-			output(index, "pingpong");
+      output.splice(index,1, "pingpong");
 		} else if (divisiblebythree(number) === 'ping') {
-			output.splice(index, "ping");
+		  output.splice(index,1, "ping");
 		} else if (divisiblebyfive(number) === 'pong') {
-			output.splice(index, "pong");
+		  output.splice(index,1,"pong");
 		}
 	});
 	return output;
@@ -44,13 +44,11 @@ $(document).ready(function() {
 	$("button#submit").click(function(event){
 		event.preventDefault();
 
-		var numberInput = $("input#writenumber").val();
+		var numberInput =$("input#writenumber").val();
 		var finalResult = pingpongfinal(numberInput);
 
 		finalResult.forEach(function(number) {
 			$("ul#output").prepend("<li>" + number + "<li>");
 		});
-    //
-		// $("input#numberInput").text(output);
 	});
 });

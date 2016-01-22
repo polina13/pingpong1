@@ -19,7 +19,7 @@ describe('divisiblebyfive', function () {
 
 describe('divisiblebyfifteen', function () {
   it("will take a number that is divisible by 5 and 3 and will display 'pingpong'", function () {
-    expect(divisiblebyfifteen(15)).to.equal("pingpong");
+    expect(divisiblebyfifteen(45)).to.equal("pingpong");
   });
 });
 

@@ -1,11 +1,21 @@
-h1 {
+.banner {
   text-align: center;
-  color: red;
+  background-color: orange;
+  font-style: bold;
+  padding: 35px;
 }
 
-.col-md-3 {
-  background-color: green;
+.sidebar {
+  background-color:  #99cc00;
+  padding-bottom: 100% ;
+
 }
-.container {
-  background- color: orange;
+
+.output {
+  padding-top:20px;
+  }
+}
+
+ul {
+    list-style-type: none;
 }
