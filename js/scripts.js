@@ -1,49 +1,55 @@
-var numbersinarray = function(arrays) {
-  var listNum = [];
-  for (var i=1; i <= arrays; i++) {
-    listNum.push(i);
-  }
-  return listNum;
+var numbersinarray= function(number) {
+	var output = [];
+	for (var number = number; number > 0 ; number -= 1) {
+		integerArray.push(number);
+	}
+	return output;
+};
+
+var divisiblebythree = function(number) {
+	if (number % 3 === 0) {
+		return "ping";
+	}
+};
+
+var divisiblebyfive = function(number) {
+	if (number % 5 === 0) {
+		return "pong";
+	}
+};
+
+var divisiblebyfifteen = function(number) {
+	if ((number % 5 === 0) && (number % 3 === 0)) {
+		return "pingpong";
+	}
+};
+
+var pingpong = function(number) {
+	var output = createArray(number);
+
+	output.forEach(function(number, index, output) {
+		if (divisiblebyfifteen(number) === 'pingpong') {
+			output[index] = 'pingpong';
+		} else if (divisiblebythree(number) === 'ping') {
+			output[index] = 'ping';
+		} else if (divisiblebyfive(number) === 'pong') {
+			output[index] = 'pong';
+		}
+	});
+	return output;
 }
 
-var pingpong = function(numbers) {
-  var listNum = numbersinarray(arrays);
-    for(var i=0; i < listNum.lenght ; i ++) {
-      if (listNum % 15 === 0) {
-        
-      }
-    }
-}
+$(document).ready(function() {
+	$("button#submit").click(function(event){
+		event.preventDefault();
 
-// var pingpong = function(upperLimit) {
-//   var numbersList = createNumberList(upperLimit);
-//   for (var i=0; i < numbersList.length; i++) {
-//     if (numbersList[i] % 15 === 0) {
-//       numbersList.splice(i, 1, "pingpong");
-//     } else if (numbersList[i] % 5 === 0) {
-//       numbersList.splice(i, 1, "pong");
-//     } else if (numbersList[i] % 3 === 0) {
-//       numbersList.splice(i, 1, "ping");
-//     }
-//   }
-//   console.log(numbersList);
-//   return numbersList;
-// }
+		var number = $("input#writenumber").val();
+		var result = pingpong(number);
 
+		result.forEach(function(number) {
+			$("ul#output").prepend(" " + number + " ");
+		});
 
-
-// var pingpong = function(number) {
-//   var numbes= [];
-//
-//   if ((number % 3 === 0) && (number % 5 === 0)) {
-//     return "pingpong";
-//     }
-//
-//   if (number % 3 === 0) {
-//     return "ping";
-//     }
-//
-//   if (number % 5 === 0) {
-//      return "pong"
-//     }
-//   }
+		$("input#writenumber").reset();
+	});
+});
