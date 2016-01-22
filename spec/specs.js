@@ -1,13 +1,14 @@
-describe ('pingpong', function () {
-  it("is ping if a number is divisible by 5 and 3", function() {
-    expect(pingpong(15)).to.equal("pingpong");
+ describe ('pingpong', function () {
+  it("will be ping if a number is disible by 3 and it is replaced with ping in range of numbers", function () {
+    expect(pingpong(6)).to.equal("ping");
   });
-
-  // it("is pong if a number is divisible by 5", function() {
+  // it("will be pong if a number is divisible by 5", function() {
   //   expect(pingpong(10)).to.equal("pong");
   // });
-  //
-  // it("is pingpong if a number is divisible by 15", function() {
-  //   expect(pingpong(45)).to.equal("pingpong");
-  // });
+  it("is pingpong if a number is divisible by 15", function() {
+    expect(pingpong(45)).to.equal("pingpong");
+  });
 });
+//
+// it("will be ping if a number is disible by 3 and it is replaced with ping in range of numbers", function () {
+//   expect(pingpong(6)).to.eql([1,2,ping,3,4,5,ping]);
