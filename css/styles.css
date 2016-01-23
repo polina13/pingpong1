@@ -2,11 +2,15 @@
   text-align: center;
   background-color: orange;
   font-style: bold;
-  padding: 35px;
+  padding: 25px;
 }
 
 .sidebar {
   background-color:  #99cc00;
   padding-bottom: 100% ;
 
+}
+
+h1 {
+  font-size: 75px;
 }

@@ -42,13 +42,14 @@ var pingpongfinal = function(numberInput) {
 
 $(document).ready(function() {
 	$("button#submit").click(function(event){
-		event.preventDefault();
 
 		var numberInput =$("input#writenumber").val();
 		var finalResult = pingpongfinal(numberInput);
 
 		finalResult.forEach(function(number) {
-			$("ul#output").prepend("<li>" + number + "<li>");
+			$("ul#output").append("<li>" + number + "<li>");
 		});
+     $("#pingpongfinal").append("</ul>");
+        event.preventDefault();
 	});
 });

@@ -23,9 +23,9 @@ describe('divisiblebyfifteen', function () {
 });
 
 // last test doesn't pass-not sure why, need to get explanation from teacher during code review
-
+// made to work-mistake was the way arrays were written, it needs to start from 1 not from 15
 describe('pingpongfinal', function() {
-	it("will review the arrays and will replace nubmers divisible by 3 with ping, by 5 with pong and by 3 and 5 with pingpong", function() {
-		expect(pingpongfinal(15)).to.eql(["pingpong",14,13,"ping",11,"pong","ping",8,7,"ping","pong",4,"ping",2,1]);
+	it("will review the arrays and will replace nubmers divisible by 3 with 'ping', by 5 with 'pong' and by 3 and 5 with 'pingpong'.", function() {
+		expect(pingpongfinal(15)).to.eql([1,2,"ping",4,"pong", "ping", 7,8, "ping", "pong", 11, "ping", 13,14,"pingpong"]);
 	});
 });
