@@ -23,6 +23,7 @@ describe('divisiblebyfifteen', function () {
   });
 });
 
+// last test doesn't pass
 describe('pingpongfinal', function() {
 	it("will review the arrays and will replace nubmers divisible by 3 with ping, by 5 with pong and by 3 and 5 with pingpong", function() {
 		expect(pingpongfinal(15)).to.eql(["pingpong",14,13,"ping",11,"pong","ping",8,7,"ping","pong",4,"ping",2,1]);

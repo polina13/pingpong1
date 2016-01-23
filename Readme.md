@@ -16,3 +16,4 @@ Some of the technologies used are as following:
 
 
 ##### License
+Copyright (c) 2016 Polina Nenchev
