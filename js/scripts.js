@@ -26,9 +26,9 @@ var divisiblebyfifteen = function(numberInput) {
 	}
 };
 
- var pingpongfinal = function(numberInput) {
-    var output = numbersinarray(numberInput);
-	  output.forEach(function(number, index, output) {
+var pingpongfinal = function(numberInput) {
+  var output = numbersinarray(numberInput);
+	output.forEach(function(number, index, output) {
 		if (divisiblebyfifteen(number) === 'pingpong') {
       output.splice(index,1, "pingpong");
 		} else if (divisiblebythree(number) === 'ping') {

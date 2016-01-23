@@ -10,7 +10,6 @@ describe('divisiblebythree', function () {
   });
 });
 
-
 describe('divisiblebyfive', function () {
   it("will take a number that is divisible by 5 and will display 'pong'", function () {
     expect(divisiblebyfive(10)).to.equal("pong");
@@ -23,7 +22,8 @@ describe('divisiblebyfifteen', function () {
   });
 });
 
-// last test doesn't pass
+// last test doesn't pass-not sure why, need to get explanation from teacher during code review
+
 describe('pingpongfinal', function() {
 	it("will review the arrays and will replace nubmers divisible by 3 with ping, by 5 with pong and by 3 and 5 with pingpong", function() {
 		expect(pingpongfinal(15)).to.eql(["pingpong",14,13,"ping",11,"pong","ping",8,7,"ping","pong",4,"ping",2,1]);
